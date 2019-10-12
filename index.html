@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Calendar</title>
+    <style>
+        .table td, .table th {
+            padding: 0rem;      
+            background-color: #C6E0B4;      
+        }
+        .table-bordered thead td, .table-bordered thead th {
+            border-bottom-width: 2px;
+            background-color: #BDD7EE;
+            font-weight: normal;
+        }
+        table.table-bordered{
+            border:1px solid black;    
+        }
+        table.table-bordered > thead > tr > th{
+            border:1px solid black;
+        }
+        table.table-bordered > tbody > tr > td{
+            border:1px solid black;
+        }       
+    </style>        
+  </head>
+<body>
+       
+<div class="container col-sm-4 col-md-7 col-lg-6 mt-5">
+    <div class="card">
+        <h3 class="card-header" id="monthAndYear"></h3>
+        <table class="table table-bordered table-responsive-md" id="calendar">
+            <thead>
+            <tr>
+                <th>Pazartesi</th>
+                <th>Salı</th>
+                <th>Çarşamba</th>
+                <th>Perşembe</th>
+                <th>Cuma</th>
+                <th>Cumartesi</th>
+                <th>Pazar</th>
+            </tr>
+            </thead>
+
+            <tbody id="calendar-body" style="width:200px;">
+
+            </tbody>
+        </table>
+
+        
+        <form class="form-inline">
+            <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+                <option value=8>Eylül</option>
+            </select>
+            <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
+                <option value=2014>2014</option>
+            </select></form>
+            
+    </div>
+</div>
+
+<!--<button name="jump" onclick="jump()">Go</button>-->
+<script src="scripts.js"></script>
+
+</body>
+</html>
